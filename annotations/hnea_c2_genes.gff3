@@ -1,0 +1,7 @@
+##gff-version 3
+#!genome-build European Nucleotide Archive ASM2476v1
+#!genome-version ASM2476v1
+#!genome-date 2014-05
+#!genome-build-accession GCA_000024765.1
+#!genebuild-last-updated 2014-05
+Chromosome	European Nucleotide Archive	chromosome	1	2582886	.	.	.	ID=chromosome:Chromosome;Alias=CP001801.1;Is_circular=true

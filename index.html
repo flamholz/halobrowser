@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="//igv.org/web/img/favicon.ico">
+
+    <title>IGV - Integrative Genomics Viewer</title>
+
+    <!-- jQuery UI CSS -->
+    <link rel="stylesheet" type="text/css"
+          href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css"/>
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+    <!-- IGV CSS -->
+    <link rel="stylesheet" type="text/css" href="https://igv.org/web/release/1.0.9/igv-1.0.9.css">
+
+    <!-- jQuery JS -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+
+    <!-- IGV JS-->
+    <script type="text/javascript" src="https://igv.org/web/release/1.0.9/igv-1.0.9.js"></script>
+
+</head>
+
+<body>
+
+<p>
+
+<h1>1000 Genomes VCF file</h1></p>
+
+<div id="igvDiv" style="padding-top: 10px;padding-bottom: 10px; border:1px solid lightgray"></div>
+
+<script type="text/javascript">
+
+    var div = document.getElementById('igvDiv');
+    var options = {
+        reference: {
+            id: "hnea_c2_chromosome",
+            fastaURL: "file:///Users/flamholz/Documents/workspace/halobrowser/hnea_c2_genome.fa",
+            indexURL: "file:///Users/flamholz/Documents/workspace/halobrowser/hnea_c2_genome.fa.fai"
+        },
+        tracks: [
+            {
+                name: "Genes",
+                type: "annotation",
+                format: "gff3",
+                sourceType: "file",
+                url: "/hnea_c2_genes.gff3",
+                order: Number.MAX_VALUE,
+                visibilityWindow: 300000000,
+                displayMode: "EXPANDED"
+            },
+        ]
+
+    };
+    var browser = igv.createBrowser(div, options);
+
+</script>
+
+</body>
+
+</html>
